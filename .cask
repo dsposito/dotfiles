@@ -1,0 +1,18 @@
+# Setup Cask.
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+# Install native apps.
+brew cask install dropbox
+brew cask install filezilla
+brew cask install firefox
+brew cask install google-chrome
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install mou
+brew cask install sequel-pro
+brew cask install sourcetree
+brew cask install spotify
+brew cask install spotifree
+brew cask install sublime-text
+brew cask install vlc
