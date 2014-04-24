@@ -2,6 +2,12 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# Ignore duplicate commands in bash history.
+export HISTCONTROL=ignoredups
+
+# Set Cask app dir.
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Add current git branch to shell command line.
 __git_ps1 ()
 {
