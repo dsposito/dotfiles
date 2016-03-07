@@ -1,16 +1,42 @@
 #!/usr/bin/env bash
 
-# Install command line tools.
+# Ask for the administrator password upfront
+sudo -v
+
+# Install command line tools
 xcode-select --install
 
+# Copy OS dotfiles
+curl -Lo dotfiles.tar.gz https://github.com/dsposito/dotfiles/archive/master.tar.gz
+tar -zxvf dotfiles.tar.gz
+rm -f dotfiles.tar.gz
+cd dotfiles-master
+for file in {bash_profile,bashrc,gitconfig}; do
+  cp -f ."$file" ~/."$file";
+done;
+unset file;
+
+# Create user bin folder
+mkdir ~/bin
+
+# Install Composer
+./.composer
+
+# Install Homebrew and packages
+./.brew
+
+# Configure Vagrant
+./.vagrant
+
 # Setup OSX
-.osx
+./.osx
 
-# Install Brew.
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-# Install apps via Cask.
-.cask
+# Cleanup local checkout of dotfiles
+cd ../
+rm -rf dotfiles-master
 
 # Install httpie.
 easy_install httpie
+
+# Load bash profile
+source ~/.bash_profile
