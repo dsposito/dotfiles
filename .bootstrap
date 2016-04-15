@@ -35,7 +35,10 @@ mkdir ~/bin
 cd ../
 rm -rf dotfiles-master
 
-# Install httpie.
+# Install CocoaPods
+sudo gem install cocoapods
+
+# Install httpie
 easy_install httpie
 
 # Load bash profile
