@@ -29,9 +29,6 @@ mkdir ~/bin
 cd ../
 rm -rf dotfiles-master
 
-# Install CocoaPods
-sudo gem install cocoapods
-
 # Install httpie
 easy_install httpie
 
