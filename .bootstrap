@@ -24,6 +24,7 @@ mkdir ~/bin
 
 # Setup MacOS
 ./macos/.macos
+./macos/.apps
 
 # Cleanup local checkout of dotfiles
 cd ../
