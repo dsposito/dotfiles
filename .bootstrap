@@ -19,14 +19,8 @@ unset file;
 # Create user bin folder
 mkdir ~/bin
 
-# Install Composer
-./.composer
-
 # Install Homebrew and packages
 ./.brew
-
-# Configure Vagrant
-./.vagrant
 
 # Setup OSX
 ./.osx

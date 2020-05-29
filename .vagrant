@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-vagrant box add laravel/homestead
