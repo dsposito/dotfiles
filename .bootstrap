@@ -22,8 +22,8 @@ mkdir ~/bin
 # Install Homebrew and packages
 ./.brew
 
-# Setup OSX
-./.osx
+# Setup MacOS
+./macos/.macos
 
 # Cleanup local checkout of dotfiles
 cd ../

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# === OPERATING SYSTEM ===
+
+# Automatically hide and show the Dock.
+defaults write com.apple.dock autohide -bool true
+
+# Save to disk (not to iCloud) by default.
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable smart dashes as they're annoying when typing code.
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+
+# === INPUT DEVICES ===
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom.
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+# Trackpad: enable tap to click for this user and for the login screen.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Keyboard: Set a blazingly fast keyboard repeat rate.
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Keyboard: Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs).
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
